@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb_01_Find_Sequence_Of_Numbers_In_String", "Labb_01_Find_Sequence_Of_Numbers_In_String\Labb_01_Find_Sequence_Of_Numbers_In_String.csproj", "{A452F8BA-0584-4F9C-B5D2-6A80FB291A6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A452F8BA-0584-4F9C-B5D2-6A80FB291A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A452F8BA-0584-4F9C-B5D2-6A80FB291A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A452F8BA-0584-4F9C-B5D2-6A80FB291A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A452F8BA-0584-4F9C-B5D2-6A80FB291A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78F38CDB-4B51-4336-8143-F47A83B13346}
+	EndGlobalSection
+EndGlobal
