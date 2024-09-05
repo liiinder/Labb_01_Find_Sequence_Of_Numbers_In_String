@@ -5,31 +5,30 @@ SumOfAllSeqNumbers(input);
 ///  Takes a string and prints the sequenses where there is 
 ///  a repeted number with numbers inbetween but not any other characters
 ///  and then sums the matching sequenses together.
-static void SumOfAllSeqNumbers(string userInput)
+static void SumOfAllSeqNumbers(string input)
 {
     Console.WriteLine();
     long sumOfAll = 0;
 
-    for (int i = 0; i < userInput.Length; i++)
+    for (int i = 0; i < input.Length; i++)
     {
-        char startChar = userInput[i];
+        char startChar = input[i];
+        if (CharIsNotDigit(startChar)) continue;
+
         string currentSequence = $"{startChar}";
 
-        for (int j = i + 1; j < userInput.Length; j++)
+        for (int j = i + 1; j < input.Length; j++)
         {
-            char currentChar = userInput[j];
+            char currentChar = input[j];
 
-            if (CharIsNotDigit(currentChar))
-            {
-                break;
-            }
+            if (CharIsNotDigit(currentChar)) break;
 
             currentSequence += currentChar;
 
             if (startChar == currentChar)
             {
                 sumOfAll += long.Parse(currentSequence);
-                HighlightedPrint(userInput, i, j);
+                HighlightedPrint(input, i, j);
                 break;
             }
         }
@@ -38,13 +37,13 @@ static void SumOfAllSeqNumbers(string userInput)
 }
 
 /// Takes a string and highlights the text in red from startIndex to endIndex
-static void HighlightedPrint(string userInput, int startIndex, int endIndex)
+static void HighlightedPrint(string input, int startIndex, int endIndex)
 {
-    for (int i = 0; i < userInput.Length; i++)
+    for (int i = 0; i < input.Length; i++)
     {
         if (i == startIndex) Console.ForegroundColor = ConsoleColor.Red;
-
-        Console.Write(userInput[i]);
+        
+        Console.Write(input[i]);
 
         if (i == endIndex) Console.ForegroundColor = ConsoleColor.Gray;
     }
