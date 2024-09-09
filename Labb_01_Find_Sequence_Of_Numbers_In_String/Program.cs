@@ -13,6 +13,7 @@ static void SumOfAllSeqNumbers(string input)
     for (int i = 0; i < input.Length; i++)
     {
         char startChar = input[i];
+
         if (CharIsNotDigit(startChar)) continue;
 
         string currentSequence = $"{startChar}";
@@ -50,7 +51,9 @@ static void HighlightedPrint(string input, int startIndex, int endIndex)
     Console.WriteLine();
 }
 
-/// Checking a character with ascii conversion if its a number is outside the scope of 0-9 
+/// Checking a character with ascii conversion if its outside the scope of the numbers 0-9
+/// Without this method it will allow lots of other characters to be seen as numbers seen on this page.
+/// https://stackoverflow.com/questions/2866738/whats-the-deal-with-char-getnumericvalue
 static bool CharIsNotDigit(char c) => ((c - '0') < 0 || (c - '0') > 9);
 
 // Test cases
