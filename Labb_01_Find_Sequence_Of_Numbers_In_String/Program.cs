@@ -1,8 +1,8 @@
 ﻿Console.Write("Skriv in en text: ");
 string input = Console.ReadLine();
-SumOfSeqNumbers(input);
+SumOfAllSeqNumbers(input);
 
-static void SumOfSeqNumbers(string input)
+static void SumOfAllSeqNumbers(string input)
 {
     Console.WriteLine();
     ulong result = 0;
@@ -31,16 +31,16 @@ static void SumOfSeqNumbers(string input)
     Console.WriteLine($"\nTotal = {result}");
 }
 
-/// Prints a string and highligts characters between startIndex and endIndex in green.
+/// Takes a string and highlights the text in red from startIndex to endIndex
 static void HighlightedPrint(string input, int startIndex, int endIndex)
 {
     for (int i = 0; i < input.Length; i++)
     {
-        if (i == startIndex) Console.ForegroundColor = ConsoleColor.Green;
+        if (i == startIndex) Console.ForegroundColor = ConsoleColor.Red;
 
         Console.Write(input[i]);
 
-        if (i == endIndex) Console.ResetColor();
+        if (i == endIndex) Console.ForegroundColor = ConsoleColor.Gray;
     }
     Console.WriteLine();
 }
